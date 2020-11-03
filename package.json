@@ -1,5 +1,5 @@
 {
-    "name": "myactions",
+    "name": "JX_Actions",
     "version": "1.0.0",
     "description": "sign everything",
     "main": "app.js",
@@ -8,17 +8,17 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sazn1314/MyActions.git"
+        "url": "git+https://github.com/jiegto/JX_Actions.git"
     },
     "keywords": [
         "sign"
     ],
-    "author": "sazs",
+    "author": "jiegto",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/sazn1314/MyActions/issues"
+        "url": "https://github.com/jiegto/JX_Actions/issues"
     },
-    "homepage": "https://github.com/sazn1314/MyActions#readme",
+    "homepage": "https://github.com/jiegto/JX_Actions#readme",
     "dependencies": {
         "download": "^8.0.0",
         "request": "^2.88.2",
