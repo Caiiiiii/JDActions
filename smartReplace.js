@@ -23,7 +23,6 @@ function batchReplace(content, replacements) {
 }
 
 async function init_notify(Secrets, content, replacements) {
-    if (!Secrets.PUSH_KEY && !Secrets.BARK_PUSH && !Secrets.TG_BOT_TOKEN) {
         if (content.indexOf("require('./sendNotify')") > 0) {
             replacements.push({
                 key: "require('./sendNotify')",
@@ -31,17 +30,8 @@ async function init_notify(Secrets, content, replacements) {
                     "{sendNotify:function(){},serverNotify:function(){},BarkNotify:function(){},tgBotNotify:function(){}}",
             });
         }
-    } else {
-        await download_notify();
-    }
 }
 
-async function download_notify() {
-    await download("https://github.com/lxk0301/scripts/raw/master/sendNotify.js", "./", {
-        filename: "sendNotify.js",
-    });
-    console.log("下载通知代码完毕");
-}
 
 module.exports = {
     replaceWithSecrets,
