@@ -3,7 +3,7 @@ async function replaceWithSecrets(content, Secrets, ext) {
     if (!Secrets || !Secrets) return content;
     const replacements = [];
     await init_notify(Secrets, content, replacements);
-    if (ext && typeof ext == "string") {
+    for (ext && typeof ext == "string") {
         (content.indexOf("require('./jdCookie.js')") > 0) {
             replacements.push({ key: "require('./jdCookie.js')", value: `{CookieJD:'${ext}'}` });
         }
