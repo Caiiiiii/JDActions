@@ -15,6 +15,3 @@ function batchReplace(content, replacements) {
 
 async function init_notify(Secrets, content, replacements)
 
-module.exports = {
-    replaceWithSecrets,
-};
