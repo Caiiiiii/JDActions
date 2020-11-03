@@ -7,7 +7,12 @@ async function replaceWithSecrets(content, Secrets, ext) {
         if (content.indexOf("require('./jdCookie.js')") > 0) {
             replacements.push({ key: "require('./jdCookie.js')", value: `{CookieJD:'${ext}'}` });
         }
-    } 
+    } else {
+        if (Secrets.JD_COOKIE && content.indexOf("require('./jdCookie.js')") > 0) {
+            replacements.push({ key: "require('./jdCookie.js')", value: JSON.stringify(Secrets.JD_COOKIE.split("&")) });
+        }
+        await downloader(content);
+    }
     return batchReplace(content, replacements);
 }
 function batchReplace(content, replacements) {
@@ -26,11 +31,17 @@ async function init_notify(Secrets, content, replacements) {
                     "{sendNotify:function(){},serverNotify:function(){},BarkNotify:function(){},tgBotNotify:function(){}}",
             });
         }
-    } 
+    } else {
+        await download_notify();
+    }
 }
 
-
-
+async function download_notify() {
+    await download("https://github.com/lxk0301/scripts/raw/master/sendNotify.js", "./", {
+        filename: "sendNotify.js",
+    });
+    console.log("下载通知代码完毕");
+}
 
 module.exports = {
     replaceWithSecrets,
