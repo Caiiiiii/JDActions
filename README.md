@@ -17,32 +17,37 @@
  **您必须在下载后的24小时内从计算机或手机中完全删除以上内容.**  </br>
 > ***您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读*** 
 
-# 特级注意事项
+## 使用方式
 
-FORK 后，如果 actions 没有定时执行，请随便找个文件，加个空格提交一下，就可以正常执行了
+1. 右上角 Fork本 仓库
 
-## 使用教程
+2. 点击 Settings -> Secrets -> 点击绿色按钮 (如无绿色按钮说明已激活。直接到第三步。)
 
-1. 直接 fork 走
-2. 再在`Settings`-`Secrets`里面添加`JD_COOKIE`
-3. 多条 cookie 用`&`隔开，支持无数条cookie
-4. 前三步之后，点击一下右上角的 star（fork左边那个），让 workflow 运行一次。
+3. 新增 new secret 并设置 Secrets:
 
-上面四步搞定后就不用管了。
+4. 双击右上角自己仓库Star触发
 
-刚 fork 完可能在 Actions 中看不到对应的 workflow
+5. **必须** - 请随便找个文件(例如`README.md`)，加个空格提交一下，否则可能会出现无法定时执行的问题(由于规则更新,可能会 Fork 后会默认禁用,请手动点击 Actions 选择要签到的项目 `enable workflows`激活)
 
-目前**已配置好自动执行时间**，到了指定时间会执行并且看到 workflow
+6. [定时执行](##定时执行)
 
-### Secrets 全集合
+## 定时执行
 
-#### 京东专用
+1. 支持手动执行，具体在 Actions 中选中要执行的 Workflows 后再在右侧可以看到 Run workflow，点击即可运行 此workflow。
+
+2. 如果嫌上一步麻烦的，也可以直接点击一下star，你会发现所有的workflow都已执行。
+
+3. 如需修改执行时间自行修改`.github\workflows\`下面的yaml内的` cron:` 执行时间为国际标准时间 [时间转换](http://www.timebie.com/cn/universalbeijing.php) 分钟在前，小时在后，尽量提前半小时，因为触发和下载需要一定时间。
+
+## Secrets 集合
+
+### 京东专用
 
 | Name                    |   归属   | 属性   | 说明                                                         |
 | ----------------------- | :------: | ------ | ------------------------------------------------------------ |
 | `JD_COOKIE`             |   京东   | 必须   | 京东cookie,具体获取参考[lxk0301的获取教程](https://github.com/lxk0301/scripts/blob/master/githubAction.md#%E4%BA%AC%E4%B8%9Ccookie)或[点击直达](#Cookie获取和配置) |
 
-#### 推送通知专用
+### 推送专用
 
 | Name                    |   归属   | 属性   | 说明                                                         |
 | ----------------------- | :------: | ------ | ------------------------------------------------------------ |
@@ -68,6 +73,38 @@ pt_pin=***;
 我有两个京东账号,则我JD_COOKIE里面要填写的内容为
 pt_key=****;pt_pin=***;&pt_key=****;pt_pin=***;
 ```
+
+## 同步Fork后的代码
+
+### 手动同步
+
+[手动同步 https://blog.blueskyclouds.com/jsfx/58.html](https://blog.blueskyclouds.com/jsfx/58.html)
+
+### 自动同步
+
+#### 方案A - 强制远程分支覆盖自己的分支
+
+1. 参考[这里](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md)，安装[pull插件](https://github.com/apps/pull)，并确认此项目已在pull插件的作用下（参考文中1-d）。
+
+2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
+
+3. 确保pull.yml里面是`mergeMethod: hardreset`(默认就是hardreset)。
+
+4. ENJOY!上游更改三小时左右就会自动发起同步。
+
+#### 方案B - 保留自己分支的修改
+
+> 上游变动后pull插件会自动发起pr，但如果有冲突需要自行**手动**确认。
+
+> 如果上游更新涉及workflow里的文件内容改动，需要自行**手动**确认。
+
+1. 参考[这里](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md)，安装[pull插件](https://github.com/apps/pull)，并确认此项目已在pull插件的作用下（参考文中1-d）。
+
+2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
+
+3. 将pull.yml里面的`mergeMethod: hardreset`修改为`mergeMethod: merge`保存。
+
+4. ENJOY!上游更改三小时左右就会自动发起同步。
 
 ## 鸣谢
 
