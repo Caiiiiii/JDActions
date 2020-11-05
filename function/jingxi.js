@@ -9,6 +9,9 @@ const download = require('download')
 const $ = new Env('京东京喜签到');
 const notify = $.isNode() ? require('../sendNotify') : '';
 
+// 公共变量
+const SEND_KEY = process.env.SEND_KEY
+
 async function downFile () {
     const url = 'https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js'
     await download(url, './')
