@@ -26,7 +26,7 @@ async function start() {
     await downFile();
     console.log('下载代码完毕')
     // 执行
-    await exec("node smzdm_checkin.js");
+    await exec("node jingxi.js");
     console.log('执行完毕')
     }
 
