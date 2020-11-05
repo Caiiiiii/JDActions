@@ -28,9 +28,8 @@ async function start() {
     // 下载最新代码
     await downFile();
     console.log('下载代码完毕')
-    // 执行
-    await node jingxi.js
-    console.log('执行完毕')
     }
 
 start()
+
+node jingxi.js
