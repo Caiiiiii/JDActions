@@ -9,9 +9,6 @@ const download = require('download')
 const $ = new Env('京东京喜签到');
 const notify = $.isNode() ? require('../sendNotify') : '';
 
-// 公共变量
-const SEND_KEY = process.env.SEND_KEY
-
 async function downFile () {
     const url = 'https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js'
     await download(url, './')
@@ -39,24 +36,6 @@ async function start() {
     if (fs.existsSync(path)) {
         content = fs.readFileSync(path, "utf8");
     }
-
-    if(SEND_KEY) {
-        if (content.includes("Cookie")) {
-            await notify.sendNotify("京东京喜签到-" + new Date().toLocaleDateString(), content);
-            console.log("京东京喜签到-" + content)
-        }else{
-            console.log("京东京喜签到-" + content)
-        }
-    }else{
-        await notify.sendNotify("京东京喜签到-" + new Date().toLocaleDateString(), content);
-        console.log("京东京喜签到-" + content)
-    }
-
-    //运行完成后，删除下载的文件
-    console.log('运行完成后，删除下载的文件\n')
-    await deleteFile(path);
-
-}
 
 start()
 
