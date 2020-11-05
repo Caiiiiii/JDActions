@@ -16,7 +16,7 @@ async function downFile () {
 
 async function changeFiele () {
     let content = await fs.readFileSync('./jingxi.js', 'utf8')
-    content = content.replace(/'./jdCookie.js'/, `'./function/jdCookie.js'`)
+    content = content.replace(/require('./jdCookie.js')/, `require('./function/jdCookie.js')`)
     await fs.writeFileSync( './jingxi.js', content, 'utf8')
 }
 
