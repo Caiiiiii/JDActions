@@ -6,9 +6,6 @@ const exec = require('child_process').execSync
 const fs = require('fs')
 const download = require('download')
 
-const $ = new Env('京东京喜签到');
-const notify = $.isNode() ? require('../sendNotify') : '';
-
 async function downFile () {
     const url = 'https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js'
     await download(url, './')
