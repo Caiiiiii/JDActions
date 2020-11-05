@@ -14,12 +14,6 @@ async function downFile () {
     await download(url, './')
 }
 
-async function changeFiele () {
-    let content = await fs.readFileSync('./jingxi.js', 'utf8')
-    content = content.replace(/require('./jdCookie.js')/, `require('./function/jdCookie.js')`)
-    await fs.writeFileSync( './jingxi.js', content, 'utf8')
-}
-
 async function deleteFile(path) {
     // 查看文件result.txt是  否存在,如果存在,先删除
     const fileExists = await fs.existsSync(path);
@@ -34,9 +28,6 @@ async function start() {
     // 下载最新代码
     await downFile();
     console.log('下载代码完毕')
-    // 替换变量
-    await changeFiele();
-    console.log('替换变量完毕')
     // 执行
     await exec("node jingxi.js >> result.txt");
     console.log('执行完毕')
