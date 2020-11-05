@@ -53,18 +53,6 @@ FORK 后，如果 actions 没有定时执行，请随便找个文件，加个空
 | `TG_USER_ID`            |   telegram推送        | tg推送,填写[@getuseridbot](https://t.me/getuseridbot)中获取到的纯数字ID, [具体教程](https://github.com/lxk0301/scripts/pull/37#issuecomment-692415594) |
 | `SEND_KEY`              |     推送开关           |如果你想只在COOKIE失效时发送推送信息,就加一个这个,参数值随便写就行|
 
-#### 关于TG推送的说明
-
-> 需要`TG_BOT_TOKEN`和`TG_USER_ID`一起使用，前者用于调用bot，后者用于指定推送目标
-
-私聊[@getuseridbot](https://t.me/getuseridbot)，点击start以后，收到的第一条纯数字消息就是你的userid了
-
-<img src="https://user-images.githubusercontent.com/6993269/93156198-3b1ad700-f73a-11ea-8f51-5ee71d06ef8a.png" alt="获取userid" style="zoom:40%;" />
-
-私聊[@BotFather](https://t.me/BotFather)，创建自己的bot
-
-<img src="https://user-images.githubusercontent.com/6993269/93155923-b0d27300-f739-11ea-928a-803134f0f416.png" alt="获取bot的token" style="zoom:40%;" />
-
 ### Cookie获取和配置
 
 > 具体如何取cookie如何配置,可参考 https://github.com/lxk0301/scripts/issues/8#issuecomment-675837338
@@ -82,5 +70,7 @@ pt_key=****;pt_pin=***;&pt_key=****;pt_pin=***;
 ```
 
 ## 鸣谢
+
+[@lxk0301](https://github.com/lxk0301)  - 京东相关
 
 [@Sunert](https://github.com/Sunert)  - 京喜签到
