@@ -5,6 +5,8 @@
 const exec = require('child_process').execSync
 const fs = require('fs')
 const download = require('download')
+const notify = $.isNode() ? require('./sendNotify') : '';
+const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 
 async function downFile () {
     const url = 'https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js'
