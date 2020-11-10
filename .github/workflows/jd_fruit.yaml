@@ -26,6 +26,7 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           FRUIT_BEAN_CARD: ${{ secrets.FRUIT_BEAN_CARD }}
+          FRUITSHARECODES: ${{ secrets.FruitShareCodes }}
           FRUIT_NOTIFY_CONTROL: ${{ secrets.FRUIT_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
