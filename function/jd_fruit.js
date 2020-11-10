@@ -36,8 +36,12 @@ async function start() {
     await changeFiele();
     console.log('替换变量完毕')
     // 执行
-    await exec("node jd_fruit.js");
+    await exec("node jd_fruit.js >> result.txt");
     console.log('执行完毕')
+    const path = "./result.txt";
+    let content = "";
+    if (fs.existsSync(path)) {
+        content = fs.readFileSync(path, "utf8");
     }
 
 start()
