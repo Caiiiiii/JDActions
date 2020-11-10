@@ -11,11 +11,6 @@ async function downFile () {
     await download(url, './')
 }
 
-async function changeFiele () {
-    let content = await fs.readFileSync('./jd_fruit.js', 'utf8')
-    content = content.replace(/notify = $.isNode/, `const notify = $.isNode`)
-    await fs.writeFileSync( './jd_fruit.js', content, 'utf8')
-}
 
 async function deleteFile(path) {
     // 查看文件result.txt是  否存在,如果存在,先删除
@@ -31,9 +26,6 @@ async function start() {
     // 下载最新代码
     await downFile();
     console.log('下载代码完毕')
-    // 替换变量
-    await changeFiele();
-    console.log('替换变量完毕')
     // 执行
     await exec("node jd_fruit.js");
     console.log('执行完毕')
