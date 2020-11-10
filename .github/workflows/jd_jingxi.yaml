@@ -1,4 +1,4 @@
-name: 京喜签到
+name: 京东京喜签到
 
 on:
   workflow_dispatch:
@@ -44,7 +44,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           npm install
-      - name: '运行 【京喜签到】'
+      - name: '运行 【京东京喜签到】'
         if: env.JD_COOKIE
         run: |
           node actions.js
