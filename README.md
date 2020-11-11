@@ -19,9 +19,9 @@
 
 ## 使用方式
 
-**不再推荐使用 Fork 的方式同步代码
+**不再推荐使用 Fork 的方式同步代码**
 
-**[建议使用 reposync 的方式进行同步代码，详细教程请点此查看](https://github.com/jiegto/Actions_JX/blob/main/backup/reposync.md)
+**[建议使用 reposync 的方式进行同步代码，详细教程请点此查看](https://github.com/jiegto/Actions_JX/blob/main/backup/reposync.md)**
 
 1. 使用 reposync 的方式进行同步代码
 
