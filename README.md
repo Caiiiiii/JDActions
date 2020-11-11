@@ -19,7 +19,10 @@
 
 ## 使用方式
 
-1. 右上角 Fork本 仓库
+**不再推荐使用 Fork 的方式同步代码**
+**[建议使用 reposync 的方式进行同步代码，详细教程请点此查看](https://github.com/jiegto/Actions_JX/blob/main/backup/reposync.md)
+
+1. 使用 reposync 的方式进行同步代码
 
 2. 点击 Settings -> Secrets -> 点击绿色按钮 (如无绿色按钮说明已激活。直接到第三步。)
 
@@ -27,9 +30,7 @@
 
 4. 双击右上角自己仓库Star触发
 
-5. **必须** - 请随便找个文件(例如`README.md`)，加个空格提交一下，否则可能会出现无法定时执行的问题(由于规则更新,可能会 Fork 后会默认禁用,请手动点击 Actions 选择要签到的项目 `enable workflows`激活)
-
-6. [定时执行](##定时执行)
+5. [定时执行](##定时执行)
 
 ## 定时执行
 
@@ -134,38 +135,6 @@ Apple京东自营旗舰店
 ```
 100&100&iPhone12&Apple京东自营旗舰店
 ```
-
-## 同步Fork后的代码
-
-### 手动同步
-
-[手动同步 https://blog.blueskyclouds.com/jsfx/58.html](https://blog.blueskyclouds.com/jsfx/58.html)
-
-### 自动同步
-
-#### 方案A - 强制远程分支覆盖自己的分支
-
-1. 参考[这里](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md)，安装[pull插件](https://github.com/apps/pull)，并确认此项目已在pull插件的作用下（参考文中1-d）。
-
-2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
-
-3. 确保pull.yml里面是`mergeMethod: hardreset`(默认就是hardreset)。
-
-4. ENJOY!上游更改三小时左右就会自动发起同步。
-
-#### 方案B - 保留自己分支的修改
-
-> 上游变动后pull插件会自动发起pr，但如果有冲突需要自行**手动**确认。
-
-> 如果上游更新涉及workflow里的文件内容改动，需要自行**手动**确认。
-
-1. 参考[这里](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md)，安装[pull插件](https://github.com/apps/pull)，并确认此项目已在pull插件的作用下（参考文中1-d）。
-
-2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
-
-3. 将pull.yml里面的`mergeMethod: hardreset`修改为`mergeMethod: merge`保存。
-
-4. ENJOY!上游更改三小时左右就会自动发起同步。
 
 ## 鸣谢
 
