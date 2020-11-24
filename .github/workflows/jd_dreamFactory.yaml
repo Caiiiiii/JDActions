@@ -1,9 +1,9 @@
-name: 京东京喜签到
+name: 京喜工厂
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 1 * * *'
+    - cron: '17 1 * * *'
   # watch:
   #       types: started
   # repository_dispatch:
