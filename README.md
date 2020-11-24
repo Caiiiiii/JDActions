@@ -48,14 +48,15 @@
 | Name                    |   归属   | 属性   | 说明                                                         |
 | ----------------------- | :------: | ------ | ------------------------------------------------------------ |
 | `JD_COOKIE`                |   京东   | 必须   | 京东cookie,具体获取参考[lxk0301的获取教程](https://github.com/lxk0301/scripts/blob/master/githubAction.md#%E4%BA%AC%E4%B8%9Ccookie)或[点击直达](#Cookie获取和配置) |
+| `JD_USER_AGENT`              |   京东   | 非必须   | 自定义此库里京东系列脚本的UserAgent，不懂不知不会UserAgent的请不要随意填写内容。具体获取参考此[issue](https://github.com/lxk0301/jd_scripts/issues/127) |
 | `JD_DEBUG`                   |   京东   | 非必须   | 运行脚本时，是否显示log,默认显示。改成false表示不显示 |
-| `JD_BEAN_STOP`               |   京东   | 非必须   | 自定义延迟签到,单位毫秒. 默认分批并发无延迟. 延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长),如需填写建议输入数字1 |
+| `JD_BEAN_STOP`               |   京东   | 非必须   | 自定义延迟签到,单位毫秒. 默认分批并发无延迟. 延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长),如需填写建议输入数字1，详见[此处说明](https://github.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js#L93) |
 | `JD_BEAN_SIGN_STOP_NOTIFY`   |   京东   | 非必须   | jd_bean_sign.js脚本运行后不推送签到结果通知，默认推送，填true表示不发送通知 |
 | `JD_BEAN_SIGN_NOTIFY_SIMPLE` |   京东   | 非必须   | jd_bean_sign.js脚本运行后推送签到结果简洁版通知，默认推送全部签到结果，填true表示推送简洁通知 |
 | `PET_NOTIFY_CONTROL`         |   京东   | 非必须   | 控制京东萌宠是否静默运行,false为否(发送推送通知消息),true为是(即：不发送推送通知消息) |
 | `FRUIT_NOTIFY_CONTROL`       |   京东   | 非必须   | 控制京东农场是否静默运行,false为否(发送推送通知消息),true为是(即：不发送推送通知消息) |
 | `JD_JOY_REWARD_NOTIFY`       |   京东   | 非必须   | 控制jd_joy_reward.js脚本是否静默运行,false为否(发送推送通知消息),true为是(即：不发送推送通知消息) |
-| `JD_818_SHAREID_NOTIFY`      |   京东   | 非必须   | 控制jd_818.js脚本是否在获取互助码后通知,true为是(发送推送通知消息),false为否(即：不发送推送通知消息) |
+| `DREAMFACTORY_NOTIFY`        |   京东   | 非必须   | 控制jd_dreamFactory.js脚本是否静默运行,false为否(发送推送通知消息),true为是(即：不发送推送通知消息) |
 | `JOY_FEED_COUNT`             |   京东   | 非必须   | 控制jd_joy_feedPets.js脚本喂食数量 ,可以填的数字10,20,40,80 , 其他数字不可 |
 | `JOY_RUN_FLAG `              |   京东   | 非必须   | 控制jd_joy.js脚本是否参加双人赛跑,false为否,true为是，脚本默认是true |
 | `JD_JOY_REWARD_NAME `        |   京东   | 非必须   | 目前可填值为20或者500,脚本默认20,0表示不兑换京豆 |
@@ -70,6 +71,7 @@
 | `PETSHARECODES `             |   京东   | 非必须   | 东东萌宠互助码，见下方互助码的填写规则 |
 | `PLANT_BEAN_SHARECODES `     |   京东   | 非必须   | 种豆得豆互助码，见下方互助码的填写规则 |
 | `SUPERMARKET_SHARECODES `    |   京东   | 非必须   | 京小超商圈互助码，见下方互助码的填写规则 |
+| `MONEY_TREE_SELL_FRUIT`      |   京东   | 非必须   | 控制摇钱树脚本是否自动卖出金果兑换成金币，`true`卖出，`false`不卖出，默认`true` |
 
 ### 推送专用
 
