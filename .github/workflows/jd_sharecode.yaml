@@ -22,12 +22,12 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@master
       - name: 提交东东工厂互助码
-        run: curl -i "$JD_FACTORY_CODE"
+        run: curl -v "$JD_FACTORY_CODE"
       - name: 提交京喜工厂互助码
-        run: curl -i "$JX_FACTORY_CODE"
+        run: curl -v "$JX_FACTORY_CODE"
       - name: 提交种豆得豆互助码
-        run: curl -i "$JD_BEAN_CODE"
+        run: curl -v "$JD_BEAN_CODE"
       - name: 提交东东农场互助码
-        run: curl -i "$JD_FARM_CODE"
+        run: curl -v "$JD_FARM_CODE"
       - name: 提交东东萌宠互助码
-        run: curl -i "$JD_PET_CODE"
+        run: curl -v "$JD_PET_CODE"
