@@ -71,7 +71,12 @@
 | `PETSHARECODES `             |   京东   | 非必须   | 东东萌宠互助码，见下方互助码的填写规则 |
 | `PLANT_BEAN_SHARECODES `     |   京东   | 非必须   | 种豆得豆互助码，见下方互助码的填写规则 |
 | `SUPERMARKET_SHARECODES `    |   京东   | 非必须   | 京小超商圈互助码，见下方互助码的填写规则 |
-| `MONEY_TREE_SELL_FRUIT`      |   京东   | 非必须   | 控制摇钱树脚本是否自动卖出金果兑换成金币，`true`卖出，`false`不卖出，默认`true` |
+| `JD_FACTORY_CODE`            |   京东   | 非必须   | 填写东东工厂提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/`|
+| `JX_FACTORY_CODE`            |   京东   | 非必须   | 填写京喜工厂提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/jxfactory/create/互助码/`|
+| `JD_BEAN_CODE`               |   京东   | 非必须   | 填写种豆得豆提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/bean/create/互助码/`|
+| `JD_FARM_CODE`               |   京东   | 非必须   | 填写东东农场提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/farm/create/互助码/`|
+| `JD_PET_CODE`                |   京东   | 非必须   | 填写东东萌宠提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/pet/create/互助码/`|
+
 
 ### 推送专用
 
