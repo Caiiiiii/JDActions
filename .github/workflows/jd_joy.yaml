@@ -3,7 +3,7 @@ name: 京东宠汪汪
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0,1,4,10,15,16 * * *'
+    - cron: '15 */2 * * *'
   #watch:
   #  types: started
   #repository_dispatch:
