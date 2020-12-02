@@ -3,7 +3,7 @@ name: 金融养
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 1 * * *'
+    - cron: '12 * * * *'
   # watch:
   #   types: started
   # repository_dispatch:
