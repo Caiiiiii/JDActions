@@ -5,24 +5,29 @@ on:
     branches:
       - master
   schedule:
-    - cron: 0 0 * * *
+    - cron: 0 19 * * *
   watch:
     types: started
 jobs:
   run-it:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    name: 提交互助码
+    env:
+      JD_FACTORY_CODE: ${{ secrets.JD_FACTORY_CODE }}
+      JX_FACTORY_CODE: ${{ secrets.JX_FACTORY_CODE }}
+      JD_BEAN_CODE: ${{ secrets.JD_BEAN_CODE }}
+      JD_FARM_CODE: ${{ secrets.JD_FARM_CODE }}
+      JD_PET_CODE: ${{ secrets.JD_PET_CODE }}
     steps:
       - name: Checkout master
         uses: actions/checkout@master
       - name: 提交东东工厂互助码
-        run: curl -i 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5m9RXTe8gg/'
+        run: curl -i '$JD_FACTORY_CODE'
       - name: 提交京喜工厂互助码
-        run: curl -i 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/GWlQwigeaeDgfZRkP61rAw==/'
+        run: curl -i '$JX_FACTORY_CODE'
       - name: 提交种豆得豆互助码
-        run: curl -i 'http://api.turinglabs.net/api/v1/jd/bean/create/2suupluvyx4y5ku2jfojuul5qy/'
+        run: curl -i '$JD_BEAN_CODE'
       - name: 提交东东农场互助码
-        run: curl -i 'http://api.turinglabs.net/api/v1/jd/farm/create/c0b110b43ec748fcb2b40ff097a472cc/'
+        run: curl -i '$JD_FARM_CODE'
       - name: 提交东东萌宠互助码
-        run: curl -i 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMjAwMDAwMDAyNjQwMDk3NQ==/'
+        run: curl -i '$JD_PET_CODE'
