@@ -9,7 +9,7 @@ on:
   #repository_dispatch:
   #  types: jd_sharecode
 jobs:
-  run-it:
+  build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
