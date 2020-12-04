@@ -17,6 +17,7 @@ jobs:
       RUNFILE: "jd_dreamFactory.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       FACTORY_NOTIFY_CONTROL: ${{ secrets.FACTORY_NOTIFY_CONTROL }}
+      FACTORAY_WANTPRODUCT_NAME: ${{ secrets.FACTORAY_WANTPRODUCT_NAME }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
       BARK_PUSH: ${{ secrets.BARK_PUSH }}
       BARK_SOUND: ${{ secrets.BARK_SOUND }}
