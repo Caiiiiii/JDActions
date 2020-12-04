@@ -76,6 +76,8 @@
 | `JD_BEAN_CODE`               |   京东   | 非必须   | 填写种豆得豆提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/bean/create/互助码/`|
 | `JD_FARM_CODE`               |   京东   | 非必须   | 填写东东农场提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/farm/create/互助码/`|
 | `JD_PET_CODE`                |   京东   | 非必须   | 填写东东萌宠提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/pet/create/互助码/`|
+| `MONEY_TREE_SELL_FRUIT `     |   京东   | 非必须   | 控制摇钱树脚本是否自动卖出金果兑换成金币，`true`卖出，`false`不卖出，默认`true` |
+| `FACTORAY_WANTPRODUCT_NAME ` |   京东   | 非必须   | 东东工厂心仪商品，提供心仪商品名称(请尽量填写完整和别的商品有区分度)，达到条件后兑换，如不提供则会兑换当前所选商品 |
 
 
 ### 推送专用
