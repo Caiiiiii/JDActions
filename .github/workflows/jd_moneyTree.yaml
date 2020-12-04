@@ -17,6 +17,7 @@ jobs:
       RUNFILE: "jd_moneyTree.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       JD_DEBUG: ${{ secrets.JD_DEBUG }}
+      MONEY_TREE_SELL_FRUIT: ${{ secrets.MONEY_TREE_SELL_FRUIT }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
       BARK_PUSH: ${{ secrets.BARK_PUSH }}
       BARK_SOUND: ${{ secrets.BARK_SOUND }}
