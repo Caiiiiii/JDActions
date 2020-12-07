@@ -7,7 +7,7 @@ on:
   # watch:
   #   types: started
   # repository_dispatch:
-  #   types: speed
+  #   types: jd_pigPet
 jobs:
   build:
 
@@ -15,7 +15,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       URL: "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js"
-      RUNFILE: "jd_speed.js"
+      RUNFILE: "jd_pigPet.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       JD_DEBUG: ${{ secrets.JD_DEBUG }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
