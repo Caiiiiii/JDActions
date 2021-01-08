@@ -1,5 +1,5 @@
 /*
-水果互助码
+东东农场互助码
 此文件为Node.js专用。其他用户请忽略
 支持京东N个账号
  */
@@ -11,7 +11,7 @@ let FruitShareCodes = [
   '',//账号一的好友shareCode,不同好友中间用@符号隔开
   '',//账号二的好友shareCode，不同好友中间用@符号隔开
 ]
-// 判断github action里面是否有水果互助码
+// 判断github action里面是否有东东农场互助码
 if (process.env.FRUITSHARECODES) {
   if (process.env.FRUITSHARECODES.indexOf('&') > -1) {
     console.log(`您的东东农场互助码选择的是用&隔开\n`)
