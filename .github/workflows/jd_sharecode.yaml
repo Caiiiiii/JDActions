@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      JD_FACTORY_CODE: ${{ secrets.JD_FACTORY_CODE }}
       JX_FACTORY_CODE: ${{ secrets.JX_FACTORY_CODE }}
       JD_BEAN_CODE: ${{ secrets.JD_BEAN_CODE }}
       JD_FARM_CODE: ${{ secrets.JD_FARM_CODE }}
@@ -23,8 +22,6 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@master
-      - name: 提交东东工厂互助码
-        run: curl -v "$JD_FACTORY_CODE"
       - name: 提交京喜工厂互助码
         run: curl -v "$JX_FACTORY_CODE"
       - name: 提交种豆得豆互助码
