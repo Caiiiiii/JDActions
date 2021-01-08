@@ -18,6 +18,8 @@ jobs:
       JD_BEAN_CODE: ${{ secrets.JD_BEAN_CODE }}
       JD_FARM_CODE: ${{ secrets.JD_FARM_CODE }}
       JD_PET_CODE: ${{ secrets.JD_PET_CODE }}
+      JD_ZZ_CODE: ${{ secrets.JD_ZZ_CODE }}
+      JD_CRAZYJOY_CODE: ${{ secrets.JD_CRAZYJOY_CODE }}
     steps:
       - name: Checkout master
         uses: actions/checkout@master
@@ -31,3 +33,7 @@ jobs:
         run: curl -v "$JD_FARM_CODE"
       - name: 提交东东萌宠互助码
         run: curl -v "$JD_PET_CODE"
+      - name: 提交疯狂的joy互助码
+        run: curl -v "$JD_CRAZYJOY_CODE"
+      - name: 提交京东赚赚互助码
+        run: curl -v "$JD_ZZ_CODE"
