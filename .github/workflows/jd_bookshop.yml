@@ -3,7 +3,7 @@ name: 口袋书店
 on:
   workflow_dispatch:
   schedule:
-    - cron: '22 1 * * *'
+    - cron: '1 0,4,10 * * *'
   # watch:
   #       types: started
   # repository_dispatch:
