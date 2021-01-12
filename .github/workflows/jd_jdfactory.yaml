@@ -16,7 +16,6 @@ jobs:
       URL: "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js"
       RUNFILE: "jd_dreamFactory.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
-      FACTORAY_NOTIFY_CONTROL: ${{ secrets.FACTORAY_NOTIFY_CONTROL }}
       FACTORAY_WANTPRODUCT_NAME: ${{ secrets.FACTORAY_WANTPRODUCT_NAME }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
       BARK_PUSH: ${{ secrets.BARK_PUSH }}
