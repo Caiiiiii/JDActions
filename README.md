@@ -126,14 +126,8 @@
 | `TG_USER_ID`            |   telegram推送        | tg推送,填写[@getuseridbot](https://t.me/getuseridbot)中获取到的纯数字ID, [具体教程](https://github.com/lxk0301/scripts/pull/37#issuecomment-692415594) |
 | `DD_BOT_TOKEN`          |   钉钉推送   | 钉钉推送[官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) ,只需`https://oapi.dingtalk.com/robot/send?access_token=XXX` 等于符号后面的XXX， 注：如果钉钉推送只填写`DD_BOT_TOKEN`，那么安全设置需勾选`自定义关键词`，内容输入输入`账号`即可，其他安全设置不要勾选 |
 | `DD_BOT_SECRET`         |   钉钉推送   | 密钥，机器人安全设置页面，加签一栏下面显示的SEC开头的字符串 , 注:填写了`DD_BOT_TOKEN`和`DD_BOT_SECRET`，钉钉机器人安全设置只需勾选`加签`即可，其他选项不要勾选,再不懂看 [这个图](icon/DD_bot.png) |
-| `QYWX_KEY`              |   企业微信推送    | 密钥，企业微信推送 webhook 后面的 key [详见官方说明文档](https://work.weixin.qq.com/api/doc/90000/90136/91770) |
 | `IGOT_PUSH_KEY`         |   iGot推送   | iGot聚合推送，支持多方式推送，确保消息可达。 [参考文档](https://wahao.github.io/Bark-MP-helper ) |
-| `QQ_SKEY`               |   酷推(Cool Push)推送   | 推送所需的Skey,登录后获取Skey [参考文档](https://cp.xuthus.cc/) |
-| `QQ_MODE`               |   酷推(Cool Push)推送   | 推送方式(send或group或者wx，默认send) [参考文档](https://cp.xuthus.cc/) |
-| `PUSH_PLUS_TOKEN`       |   pushplus推送  | 微信扫码登录后一对一推送或一对多推送下面的token(您的Token) [官方网站](http://pushplus.hxtrip.com/)                     |
-| `PUSH_PLUS_USER`        |   pushplus推送  | 一对多推送的“群组编码”（一对多推送下面->您的群组(如无则新建)->群组编码）注:(1、需订阅者扫描二维码 2、如果您是创建群组所属人，也需点击“查看二维码”扫描绑定，否则不能接受群组消息推送)，只填`PUSH_PLUS_TOKEN`默认为一对一推送                    |
-| `TG_PROXY_HOST`         |  Telegram 代理的 IP | 代理类型为 http。例子：http代理 http://127.0.0.1:1080 则填写 127.0.0.1 |
-| `TG_PROXY_PORT`         |  Telegram 代理的端口  | 例子：http代理 http://127.0.0.1:1080 则填写 1080 |
+
 
 ### Cookie获取和配置
 
