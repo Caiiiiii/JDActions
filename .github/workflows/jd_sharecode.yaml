@@ -20,6 +20,7 @@ jobs:
       JD_PET_CODE: ${{ secrets.JD_PET_CODE }}
       JD_ZZ_CODE: ${{ secrets.JD_ZZ_CODE }}
       JD_CRAZYJOY_CODE: ${{ secrets.JD_CRAZYJOY_CODE }}
+      JD_CASH_CODE: ${{ secrets.JD_CASH_CODE }}
     steps:
       - name: Checkout master
         uses: actions/checkout@master
@@ -37,3 +38,5 @@ jobs:
         run: curl -v "$JD_CRAZYJOY_CODE"
       - name: 提交京东赚赚互助码
         run: curl -v "$JD_ZZ_CODE"
+      - name: 提交京东签到领现金互助码
+        run: curl -v "$JD_CASH_CODE"
