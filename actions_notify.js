@@ -31,6 +31,9 @@ async function start() {
     // 下载最新代码
     await downFile();
     console.log('下载代码完毕')
+    // 替换变量
+    await changeFiele();
+    console.log('替换变量完毕')
     // 执行
     await exec(`node ${runFile} >> result.txt`);
     console.log('执行完毕')
