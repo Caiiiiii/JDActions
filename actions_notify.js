@@ -15,7 +15,7 @@ async function downFile() {
 async function changeFiele () {
     let content = await fs.readFileSync(`./${runFile}`, 'utf8')
     content = content.replace(/let jdNotify = true/, `let jdNotify = false`)
-    await fs.writeFileSync(`./${runFile}`, file, 'utf8')
+    await fs.writeFileSync(`./${runFile}`, content, 'utf8')
 }
 
 async function deleteFile(path) {
