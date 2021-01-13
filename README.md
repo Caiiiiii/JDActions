@@ -43,6 +43,8 @@
 
 ## Secrets 集合
 
+> 参考：[环境变量说明](https://github.com/lxk0301/jd_scripts/blob/master/githubAction.md)
+
 ### 京东(必须)
 
 | Name                    |   归属   | 属性   | 说明                                                         |
