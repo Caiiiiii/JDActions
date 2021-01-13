@@ -3,7 +3,7 @@ name: 京东家庭号
 on:
   workflow_dispatch:
   schedule:
-    - cron: '22 1 * * *'
+    - cron: '1 16,0,4,8 * * *'
   # watch:
   #       types: started
   # repository_dispatch:
