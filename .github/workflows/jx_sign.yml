@@ -47,4 +47,4 @@ jobs:
       - name: '运行 【京喜签到】'
         if: env.JD_COOKIE
         run: |
-          node actions_notify.js
+          node actions.js
