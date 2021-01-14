@@ -19,7 +19,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync Actions_smzdm
+      - name: sync lxk0301
         uses: repo-sync/github-sync@v2
         if: env.GIT_TOKEN
         with:
