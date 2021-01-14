@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://gitee.com/lxk0301/jd_scripts/raw/master/jd_daily_egg.js"
+      URL: "https://raw.githubusercontent.com/jiegto/Actions_JX/master/jd_daily_egg.js"
       RUNFILE: "jd_daily_egg.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       JD_DEBUG: ${{ secrets.JD_DEBUG }}

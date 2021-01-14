@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://gitee.com/lxk0301/jd_scripts/raw/master/jd_syj.js"
+      URL: "https://raw.githubusercontent.com/jiegto/Actions_JX/master/jd_syj.js"
       RUNFILE: "jd_syj.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
