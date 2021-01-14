@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js"
+      URL: "https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_steal.js"
       RUNFILE: "jd_joy_steal.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       JD_DEBUG: ${{ secrets.JD_DEBUG }}
