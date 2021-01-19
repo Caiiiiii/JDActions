@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://raw.githubusercontent.com/jiegto/Actions_JX/master/jd_unbind.js"
+      URL: "https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js"
       RUNFILE: "jd_unbind.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       UN_BIND_CARD_NUM: ${{ secrets.UN_BIND_CARD_NUM }}

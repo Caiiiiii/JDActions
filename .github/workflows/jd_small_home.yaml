@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://raw.githubusercontent.com/jiegto/Actions_JX/master/jd_small_home.js"
+      URL: "https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_small_home.js"
       RUNFILE: "jd_small_home.js"
       JD_COOKIE: ${{ secrets.JD_COOKIE }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
