@@ -111,11 +111,6 @@
 | `BOOKSHOP_SHARECODES`       | 京东书店互助码 | 非必须 | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则)                                                                       |
 | `JD_CASH_SHARECODES`        | 签到领现金互助码 | 非必须 | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则)                                                                       |
 | `JXNC_SHARECODES`           | 京喜农场互助码 | 非必须 | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则)                                                                       |
-| `JD_FACTORY_CODE`            |   京东   | 非必须   | 填写东东工厂提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/`|
-| `JX_FACTORY_CODE`            |   京东   | 非必须   | 填写京喜工厂提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/jxfactory/create/互助码/`|
-| `JD_BEAN_CODE`               |   京东   | 非必须   | 填写种豆得豆提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/bean/create/互助码/`|
-| `JD_FARM_CODE`               |   京东   | 非必须   | 填写东东农场提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/farm/create/互助码/`|
-| `JD_PET_CODE`                |   京东   | 非必须   | 填写东东萌宠提交互助码的完整链接 `http://api.turinglabs.net/api/v1/jd/pet/create/互助码/`|
 
 ### 推送专用
 
