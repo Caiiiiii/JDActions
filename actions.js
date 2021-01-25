@@ -15,7 +15,7 @@ async function downFile() {
 async function changeFiele () {
     let content = await fs.readFileSync('./${runFile}', 'utf8')
     content = content.replace(/"undefined"!=typeof process&&JSON.stringify(process.env).indexOf("GITHUB")>-1&&process.exit(0);/, ``)
-    await fs.writeFileSync( './${runFile}', content, 'utf8')
+    await fs.writeFileSync( './${runFile}', file, 'utf8')
 }
 
 async function deleteFile(path) {
