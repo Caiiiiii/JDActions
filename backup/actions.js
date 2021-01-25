@@ -12,12 +12,6 @@ async function downFile() {
     await fs.writeFileSync(`./${runFile}`, file, 'utf8')
 }
 
-async function changeFiele () {
-    let content = await fs.readFileSync(`./${runFile}`, 'utf8')
-    content = content.replace(/"undefined"!=typeof process&&JSON.stringify(process.env).indexOf("GITHUB")>-1&&process.exit(0);/, ``)
-    await fs.writeFileSync(`./${runFile}`, content, 'utf8')
-}
-
 async function deleteFile(path) {
   // 查看文件result.txt是否存在,如果存在,先删除
   const fileExists = await fs.existsSync(path);
@@ -32,9 +26,6 @@ async function start() {
     // 下载最新代码
     await downFile();
     console.log('下载代码完毕')
-    // 替换变量
-    await changeFiele();
-    console.log('替换变量完毕')
     // 执行
     await exec(`node ${runFile} >> result.txt`);
     console.log('执行完毕')
